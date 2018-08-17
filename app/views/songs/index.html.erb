@@ -1,6 +1,6 @@
 <h1> SONG LIBRARY </h1>
 
-<%= @songs.each do |song| %>
+<% @songs.each do |song| %>
   <h3><%= link_to song.title, song_path(song) %></h3>
   <p>by: <%= song.artist_name %></p>
     <% if song.released %>
