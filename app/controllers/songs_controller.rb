@@ -34,5 +34,7 @@ class SongsController < ApplicationController
     end
   end
 
-  def
+  def delete
+    Song.find(params[:id]).destroy
+  end
 end
