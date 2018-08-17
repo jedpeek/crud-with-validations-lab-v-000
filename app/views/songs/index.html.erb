@@ -18,11 +18,8 @@
     <% @songs.each do |song| %>
       <tr>
         <td><%= song.title %></td>
-        <td> <% if song.released ? song.release_year : Unreleased %>
-                <%= song.release_year %>
-             <% else %>
-             Unreleased
-             <% end %>
+        <td> <% song.released ? song.release_year : Unreleased %>
+
       </td>
         <td><%= song.genre %></td>
         <td><%= song.artist_name %></td>
