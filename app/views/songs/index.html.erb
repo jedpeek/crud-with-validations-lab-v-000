@@ -3,13 +3,11 @@
 <%= @songs.each do |song| %>
   <h3><%= link_to song.title, song_path(song) %></h3>
   <p>by: <%= song.artist_name %></p>
-
     <% if @song.released %>
       <p> Released: <%= @song.release_year %></p>
     <% else %>
         <p> Unreleased </p>
     <% end %>
-
   <p>Genre: <%= @song.genre %> </p>
   <br>
 <% end %>
