@@ -37,4 +37,9 @@ class SongsController < ApplicationController
   def delete
     Song.find(params[:id]).destroy
   end
+
+  private
+
+  def song_params
+    params.require(:song).permit(:title, :released, :release_year, :artist_name, :genre)
 end
