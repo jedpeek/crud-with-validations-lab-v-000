@@ -19,7 +19,10 @@
       <tr>
         <td><%= song.title %></td>
         <td> <% if released %>
-          <%= song.release_year %></td>
+                <%= song.release_year %>
+             <% else %>
+             "Unreleased"
+      </td>
         <td><%= song.genre %></td>
         <td><%= song.artist_name %></td>
         <td>
