@@ -1,7 +1,7 @@
 <h1> SONG LIBRARY </h1>
 
 <%= @songs.each do |song| %>
-  <h3><%= song.title %></h3>
+  <h3><%= link_to song.title, song_path(song) %></h3>
   <p>by:<%= song.artist_name %></p>
   <br>
 <% end %>
